@@ -573,13 +573,15 @@
                     .attr('height', height)
                     .attr('class', 'bubble-svg');
                 
-                const colorMap = {
-                    const colors = {
-                        "AI": "#C5DFF8", // Pastel sky blue
-                        "Biotech": "#F8C5D5", // Soft cherry blossom pink
-                        "Energy": "#F8E5C5", // Warm buttercream yellow
-                        "Fintech": "#D5C5F8" // Light lavender
-                    };
+                const colors = {
+                    "AI": "#C5DFF8", // Pastel sky blue
+                    "Biotech": "#F8C5D5", // Soft cherry blossom pink
+                    "Energy": "#F8E5C5", // Warm buttercream yellow
+                    "Fintech": "#D5C5F8" // Light lavender
+                };
+                
+                const colorMap = colors; // Ensure it's correctly referenced
+
 
                 
                 // Create a simulation for positioning
