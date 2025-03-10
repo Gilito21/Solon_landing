@@ -352,7 +352,7 @@
             .data(data)
             .enter()
             .append('circle')
-            .attr('r', d => Math.sqrt(d.value) * 2.5)
+            .attr('r', d => Math.sqrt(d.value) * 3.0)
             .attr('fill', d => `url(#gradient-${d.category})`)
             .attr('stroke', 'rgba(255, 255, 255, 0.6)')
             .attr('stroke-width', 1.5)
