@@ -337,9 +337,13 @@ a {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsive layout */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
 }
+
 
 .feature-card {
     background: var(--card-bg);
