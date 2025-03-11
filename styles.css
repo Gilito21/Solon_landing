@@ -850,3 +850,60 @@ footer {
         gap: 1rem;
     }
 }
+#bubble-chart {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 300px;
+    position: relative;
+    background-color: #0a0f1d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bubble-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure tooltip isn't cut off on mobile */
+.tooltip {
+    touch-action: none;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Add specific mobile tweaks */
+@media (max-width: 767px) {
+    #bubble-chart {
+        min-height: 250px;
+        max-height: 400px;
+    }
+    
+    /* Ensure touch targets are large enough */
+    .bubbles circle {
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+    
+    /* Improve tooltip positioning */
+    .tooltip {
+        max-width: 120px;
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    #bubble-chart {
+        min-height: 200px;
+    }
+    
+    /* Hide certain visual elements on very small screens */
+    .particles {
+        display: none;
+    }
+}
