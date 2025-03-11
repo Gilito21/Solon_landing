@@ -706,23 +706,23 @@
         <h2 class="section-title">Partnered with <span class="gradient-text">Top VCs</span></h2>
         <div class="vc-logos">
             <div class="vc-logo">
-                <i class="fas fa-building"></i>
+                <img src="assets/images/vc-logos/sequoia.png" alt="Sequoia Capital Logo">
                 <span>Sequoia Capital</span>
             </div>
             <div class="vc-logo">
-                <i class="fas fa-building"></i>
+                <img src="assets/images/vc-logos/andreessen.png" alt="Andreessen Horowitz Logo">
                 <span>Andreessen Horowitz</span>
             </div>
             <div class="vc-logo">
-                <i class="fas fa-building"></i>
+                <img src="assets/images/vc-logos/accel.png" alt="Accel Logo">
                 <span>Accel</span>
             </div>
             <div class="vc-logo">
-                <i class="fas fa-building"></i>
+                <img src="assets/images/vc-logos/benchmark.png" alt="Benchmark Logo">
                 <span>Benchmark</span>
             </div>
             <div class="vc-logo">
-                <i class="fas fa-building"></i>
+                <img src="assets/images/vc-logos/lightspeed.png" alt="Lightspeed Logo">
                 <span>Lightspeed</span>
             </div>
         </div>
@@ -948,6 +948,73 @@
             .step-icon {
                 margin-top: 15px;
                 margin-left: 0;
+            }
+        }
+
+        .vc-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .vc-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vc-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .vc-logo img {
+            width: 120px;
+            height: 60px;
+            object-fit: contain;
+            filter: brightness(0) invert(1); /* Makes the logos white */
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .vc-logo:hover img {
+            opacity: 1;
+        }
+
+        .vc-logo span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .vc-logos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 0 10px;
+            }
+            
+            .vc-logo img {
+                width: 100px;
+                height: 50px;
+            }
+            
+            .vc-logo span {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vc-logos {
+                grid-template-columns: 1fr;
             }
         }
     </style>
