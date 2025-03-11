@@ -420,13 +420,13 @@
 
             // Adjust simulation forces for mobile
             const simulation = d3.forceSimulation(data)
-                .force('charge', d3.forceManyBody().strength(isMobile ? 0 : (5 * bubbleScale)))
+                .force('charge', d3.forceManyBody().strength(isMobile ? -20 : (5 * bubbleScale)))
                 .force('center', d3.forceCenter(width / 2, height / 2))
-                .force('collision', d3.forceCollide().radius(d => Math.sqrt(d.value) * (isMobile ? 3.2 : 2.8) * bubbleScale))
-                .force('x', d3.forceX(width / 2).strength(0.1))
-                .force('y', d3.forceY(height / 2).strength(0.1))
+                .force('collision', d3.forceCollide().radius(d => Math.sqrt(d.value) * (isMobile ? 4.2 : 2.8) * bubbleScale))
+                .force('x', d3.forceX(width / 2).strength(0.08))
+                .force('y', d3.forceY(height / 2).strength(0.08))
                 .alphaDecay(0.02)
-                .velocityDecay(0.4) // Slower movement for better mobile experience
+                .velocityDecay(0.4)
                 .on('tick', ticked);
 
             // Create enhanced bubbles
@@ -543,15 +543,15 @@
             }
 
             function ticked() {
-                const padding = isMobile ? 20 : 40;
+                const padding = isMobile ? 30 : 40;
                 
                 bubbles
                     .attr('cx', d => {
-                        const radius = Math.sqrt(d.value) * (isMobile ? 4 : 3.5) * bubbleScale;
+                        const radius = Math.sqrt(d.value) * (isMobile ? 4.2 : 3.5) * bubbleScale;
                         return d.x = Math.max(radius + padding, Math.min(width - radius - padding, d.x));
                     })
                     .attr('cy', d => {
-                        const radius = Math.sqrt(d.value) * (isMobile ? 4 : 3.5) * bubbleScale;
+                        const radius = Math.sqrt(d.value) * (isMobile ? 4.2 : 3.5) * bubbleScale;
                         return d.y = Math.max(radius + padding, Math.min(height - radius - padding, d.y));
                     });
 
