@@ -420,12 +420,12 @@
 
             // Adjust simulation forces for mobile
             const simulation = d3.forceSimulation(data)
-                .force('charge', d3.forceManyBody().strength(isMobile ? -20 : (5 * bubbleScale)))
+                .force('charge', d3.forceManyBody().strength(isMobile ? -50 : (5 * bubbleScale))) // Increased repulsion
                 .force('center', d3.forceCenter(width / 2, height / 2))
-                .force('collision', d3.forceCollide().radius(d => Math.sqrt(d.value) * (isMobile ? 4.2 : 2.8) * bubbleScale))
-                .force('x', d3.forceX(width / 2).strength(0.08))
-                .force('y', d3.forceY(height / 2).strength(0.08))
-                .alphaDecay(0.02)
+                .force('collision', d3.forceCollide().radius(d => Math.sqrt(d.value) * (isMobile ? 5.5 : 2.8) * bubbleScale)) // Increased collision radius
+                .force('x', d3.forceX(width / 2).strength(0.05)) // Reduced strength to allow more spread
+                .force('y', d3.forceY(height / 2).strength(0.05)) // Reduced strength to allow more spread
+                .alphaDecay(0.01) // Slower decay for better spacing
                 .velocityDecay(0.4)
                 .on('tick', ticked);
 
@@ -436,7 +436,7 @@
                 .data(data)
                 .enter()
                 .append('circle')
-                .attr('r', d => Math.sqrt(d.value) * (isMobile ? 4 : 3.5) * bubbleScale)
+                .attr('r', d => Math.sqrt(d.value) * (isMobile ? 4.5 : 3.5) * bubbleScale) // Slightly larger bubbles on mobile
                 .attr('fill', d => `url(#gradient-${d.category})`)
                 .attr('stroke', 'rgba(255, 255, 255, 0.8)')
                 .attr('stroke-width', isMobile ? 2 : 1.5)
@@ -518,40 +518,29 @@
                 .append('text')
                 .attr('class', 'roi-label')
                 .attr('text-anchor', 'middle')
-                .style('font-size', `${isMobile ? 9 : 10}px`)
+                .style('font-size', `${isMobile ? 11 : 10}px`) // Slightly larger on mobile
                 .style('fill', '#fff')
-                .style('opacity', isMobile ? 0 : 0.9)
+                .style('opacity', 0.9) // Always visible
+                .style('font-weight', '600') // Make it bolder
                 .style('pointer-events', 'none')
-                .style('text-shadow', '0 1px 2px rgba(0,0,0,0.8)')
+                .style('text-shadow', '0 2px 4px rgba(0,0,0,0.8)') // Enhanced shadow for better visibility
                 .text(d => d.roi);
 
+            // Remove the mobile-specific ROI visibility toggle since we want it always visible
             if (isMobile) {
-                bubbles.on(interaction.start, function(event, d) {
-                    roiLabels
-                        .filter(label => label.id === d.id)
-                        .transition()
-                        .duration(300)
-                        .style('opacity', 0.9);
-                })
-                .on(interaction.end, function(event, d) {
-                    roiLabels
-                        .filter(label => label.id === d.id)
-                        .transition()
-                        .duration(300)
-                        .style('opacity', 0);
-                });
+                roiLabels.style('opacity', 0.9); // Always visible on mobile
             }
 
             function ticked() {
-                const padding = isMobile ? 30 : 40;
+                const padding = isMobile ? 40 : 40; // Increased padding for mobile
                 
                 bubbles
                     .attr('cx', d => {
-                        const radius = Math.sqrt(d.value) * (isMobile ? 4.2 : 3.5) * bubbleScale;
+                        const radius = Math.sqrt(d.value) * (isMobile ? 4.5 : 3.5) * bubbleScale;
                         return d.x = Math.max(radius + padding, Math.min(width - radius - padding, d.x));
                     })
                     .attr('cy', d => {
-                        const radius = Math.sqrt(d.value) * (isMobile ? 4.2 : 3.5) * bubbleScale;
+                        const radius = Math.sqrt(d.value) * (isMobile ? 4.5 : 3.5) * bubbleScale;
                         return d.y = Math.max(radius + padding, Math.min(height - radius - padding, d.y));
                     });
 
@@ -561,7 +550,7 @@
 
                 roiLabels
                     .attr('x', d => d.x)
-                    .attr('y', d => d.y + (isMobile ? 15 : 20));
+                    .attr('y', d => d.y + (isMobile ? 20 : 20)); // Consistent spacing for ROI labels
             }
 
             // Optimized particles for mobile
