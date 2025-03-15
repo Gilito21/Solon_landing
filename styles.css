@@ -835,6 +835,10 @@ footer {
         display: none;
     }
     
+    .mobile-cta-container {
+        display: block;
+    }
+    
     h1 {
         font-size: 2.2rem;
     }
@@ -850,6 +854,7 @@ footer {
         gap: 1rem;
     }
 }
+
 #bubble-chart {
     width: 100%;
     max-width: 800px;
@@ -906,4 +911,38 @@ footer {
     .particles {
         display: none;
     }
+}
+
+/* Mobile CTA Button */
+.mobile-cta-container {
+    display: none;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+}
+
+.mobile-cta {
+    display: inline-block;
+    background: var(--gradient-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.mobile-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-cta i {
+    margin-left: 8px;
+}
+
+.particles {
+    display: none;
 }
