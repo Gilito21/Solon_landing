@@ -836,11 +836,16 @@ footer {
     }
     
     .mobile-cta-container {
-        display: block;
+        display: block !important;
+        position: relative;
+        bottom: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        z-index: 100;
     }
     
     .hero-content .cta-button.large {
-        display: none;
+        display: none !important;
     }
     
     h1 {
@@ -915,6 +920,18 @@ footer {
     .particles {
         display: none;
     }
+    
+    .mobile-cta {
+        padding: 0.8rem 1.8rem;
+        font-size: 1.1rem;
+        width: 80%;
+        max-width: 280px;
+    }
+    
+    .mobile-cta-container {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* Mobile CTA Button */
@@ -932,22 +949,23 @@ footer {
 
 .mobile-cta {
     display: inline-block;
-    background: var(--gradient-primary);
-    padding: 0.8rem 2rem;
+    background: var(--accent-color);
+    padding: 1rem 2.5rem;
     border-radius: 30px;
-    font-weight: 600;
-    box-shadow: var(--shadow);
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(255, 0, 128, 0.4);
     color: var(--text-color);
     transition: all 0.3s ease;
-    font-size: 1.1rem;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .mobile-cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 0, 128, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .mobile-cta i {
@@ -961,14 +979,14 @@ footer {
 @media (max-width: 768px) {
     .mobile-cta-container {
         display: block !important;
-        position: absolute;
-        bottom: 80px;
-        left: 0;
-        width: 100%;
+        position: relative;
+        bottom: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
         z-index: 100;
     }
     
     .hero {
-        padding-bottom: 120px;
+        padding-bottom: 2rem;
     }
 }
