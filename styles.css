@@ -839,6 +839,10 @@ footer {
         display: block;
     }
     
+    .hero-content .cta-button.large {
+        display: none;
+    }
+    
     h1 {
         font-size: 2.2rem;
     }
@@ -917,10 +921,9 @@ footer {
 .mobile-cta-container {
     display: none;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     text-align: center;
-    margin-top: -2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .mobile-cta {
@@ -932,6 +935,7 @@ footer {
     box-shadow: var(--shadow);
     color: var(--text-color);
     transition: all 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .mobile-cta:hover {
