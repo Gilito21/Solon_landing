@@ -949,11 +949,11 @@ footer {
 
 .mobile-cta {
     display: inline-block;
-    background: var(--accent-color);
+    background: var(--gradient-primary);
     padding: 1rem 2.5rem;
     border-radius: 30px;
     font-weight: 700;
-    box-shadow: 0 5px 15px rgba(255, 0, 128, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 247, 255, 0.4);
     color: var(--text-color);
     transition: all 0.3s ease;
     font-size: 1.2rem;
@@ -964,7 +964,7 @@ footer {
 
 .mobile-cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 0, 128, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 247, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.5);
 }
 
