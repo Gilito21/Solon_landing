@@ -924,6 +924,10 @@ footer {
     padding: 0.5rem 2rem;
     text-align: center;
     margin-bottom: 1.5rem;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 10;
 }
 
 .mobile-cta {
@@ -936,11 +940,14 @@ footer {
     color: var(--text-color);
     transition: all 0.3s ease;
     font-size: 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-cta:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .mobile-cta i {
@@ -949,4 +956,19 @@ footer {
 
 .particles {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-cta-container {
+        display: block !important;
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .hero {
+        padding-bottom: 120px;
+    }
 }
