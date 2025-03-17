@@ -313,13 +313,14 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 400px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .hero-mockup {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 250px;
     object-fit: contain;
     border-radius: 16px;
     box-shadow: var(--shadow);
@@ -848,11 +849,11 @@ footer {
     }
 
     .hero-graphic {
-        max-width: 350px;
+        max-width: 250px;
     }
 
     .hero-mockup {
-        max-height: 350px;
+        max-height: 200px;
     }
 }
 
@@ -880,11 +881,11 @@ footer {
     }
 
     .hero-graphic {
-        max-width: 300px;
+        max-width: 200px;
     }
 
     .hero-mockup {
-        max-height: 300px;
+        max-height: 150px;
     }
 
     .hero-content .cta-button.large {
