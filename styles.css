@@ -269,6 +269,20 @@ a {
     height: 100%;
 }
 
+.hero-mockup {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.hero-mockup:hover {
+    transform: translateY(-10px);
+}
+
 .token-glow {
     width: 100%;
     max-width: 500px;
@@ -299,9 +313,12 @@ a {
         justify-content: center;
     }
 
+    .hero-mockup {
+        max-width: 500px;
+    }
+
     .token-glow {
-        width: 300px;
-        height: 300px;
+        display: none;
     }
 }
 
@@ -313,6 +330,10 @@ a {
     .hero-stats {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .hero-mockup {
+        max-width: 100%;
     }
 
     .token-glow {
