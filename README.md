@@ -1,6 +1,6 @@
 # 🚀 Solon - The Future of Startup Trading
 
-![Solon Logo](solon_logo.png)
+![Solon Logo](assets/solon_logo.png)
 
 Solon is a revolutionary platform that enables the trading of tokenized startup shares, providing unprecedented liquidity and accessibility to startup investments. Our platform leverages blockchain technology to democratize startup investing while ensuring full regulatory compliance.
 
