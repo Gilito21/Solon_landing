@@ -220,7 +220,7 @@ a {
     background-color: transparent;
 }
 
-/* VC Partnered Badge - adjusted position */
+/* VC Partnered Badge - repositioned */
 .vc-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.1);
@@ -232,10 +232,8 @@ a {
     letter-spacing: 1px;
     color: var(--primary-color);
     position: relative;
-    margin-bottom: 2rem;
-    margin-top: 0;
+    margin-bottom: 1rem;
     z-index: 2;
-    align-self: flex-start;
 }
 
 .hero-content {
@@ -248,13 +246,15 @@ a {
     z-index: 1;
     position: relative;
     gap: 4rem;
-    padding-top: 1rem;
+    padding-top: 2rem; /* Increased padding to prevent nav overlap */
 }
 
 /* Left Side: Text Content */
 .hero-text-content {
     flex: 1;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-title {
@@ -288,7 +288,7 @@ a {
 
 .hero-mockup {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px; /* Reduced from 300px */
     height: auto;
     object-fit: contain;
     border-radius: 16px;
@@ -383,16 +383,19 @@ a {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        padding-top: 0;
+        padding-top: 1rem;
     }
     
     .hero-text-content, .hero-right-content {
         max-width: 100%;
     }
     
-    .vc-badge {
-        align-self: center;
-        margin-bottom: 2rem;
+    .hero-text-content {
+        align-items: center;
+    }
+    
+    .hero-mockup {
+        max-width: 220px; /* Even smaller on mobile */
     }
     
     .hero-stats {
