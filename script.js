@@ -116,15 +116,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize Chart.js for trading volume chart
-    const tradingVolumeChart = document.getElementById('trading-volume-chart');
+    // Updated Trading Volume Chart for monochrome theme
+const tradingVolumeChart = document.getElementById('trading-volume-chart');
     
     if (tradingVolumeChart) {
         const ctx = tradingVolumeChart.getContext('2d');
         
-        // Chart gradient
+        // Chart gradient - monochrome version
         const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-        gradient.addColorStop(0, 'rgba(0, 247, 255, 0.5)');
-        gradient.addColorStop(1, 'rgba(0, 247, 255, 0)');
+        gradient.addColorStop(0, 'rgba(255, 255, 255, 0.5)');
+        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
         
         new Chart(ctx, {
             type: 'line',
@@ -133,11 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 datasets: [{
                     label: 'Trading Volume (in millions $)',
                     data: [50, 80, 120, 190, 230, 290, 320, 390, 450, 520, 600, 700],
-                    borderColor: '#00f7ff',
+                    borderColor: '#ffffff',
                     backgroundColor: gradient,
-                    borderWidth: 3,
-                    pointBackgroundColor: '#00f7ff',
-                    pointBorderColor: '#0a0b1e',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: '#121212',
                     pointRadius: 6,
                     pointHoverRadius: 8,
                     tension: 0.4,
@@ -152,13 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         display: false
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(10, 11, 30, 0.8)',
+                        backgroundColor: 'rgba(32, 32, 32, 0.9)',
                         titleColor: '#fff',
                         bodyColor: '#fff',
-                        borderColor: 'rgba(0, 247, 255, 0.3)',
+                        borderColor: 'rgba(255, 255, 255, 0.2)',
                         borderWidth: 1,
                         padding: 10,
-                        displayColors: false
+                        displayColors: false,
+                        cornerRadius: 8
                     }
                 },
                 scales: {
@@ -182,6 +184,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                 return '$' + value + 'M';
                             }
                         }
+                    }
+                },
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 0.2,
+                        to: 0.4,
+                        loop: false
                     }
                 }
             }
