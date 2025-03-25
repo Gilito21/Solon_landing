@@ -220,7 +220,7 @@ a {
     background-color: transparent;
 }
 
-/* VC Partnered Badge - positioned at the top */
+/* VC Partnered Badge - adjusted position */
 .vc-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.1);
@@ -231,10 +231,11 @@ a {
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--primary-color);
-    align-self: flex-start;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-top: 0;
     z-index: 2;
+    align-self: flex-start;
 }
 
 .hero-content {
@@ -247,6 +248,7 @@ a {
     z-index: 1;
     position: relative;
     gap: 4rem;
+    padding-top: 1rem;
 }
 
 /* Left Side: Text Content */
@@ -281,7 +283,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-mockup {
@@ -302,6 +304,7 @@ a {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 0.5rem;
 }
 
 .cta-button {
@@ -310,11 +313,14 @@ a {
     color: var(--text-color);
     padding: 1rem 2.5rem;
     border-radius: 30px;
+    font-size: 1.1rem;
     font-weight: 600;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: center;
+    width: 100%;
+    max-width: 250px;
 }
 
 .cta-button:hover {
@@ -331,7 +337,7 @@ a {
     display: flex;
     justify-content: center;
     gap: 6rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     z-index: 2;
     width: 100%;
     max-width: 1200px;
@@ -377,6 +383,7 @@ a {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        padding-top: 0;
     }
     
     .hero-text-content, .hero-right-content {
@@ -395,6 +402,10 @@ a {
     
     .hero-title {
         font-size: 2rem;
+    }
+
+    .cta-button {
+        max-width: 300px;
     }
 }
 
