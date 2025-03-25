@@ -233,7 +233,7 @@ a {
 }
 
 .hero-text-content {
-    flex: 1;
+    flex: 2; /* Increased from 1 to take more space */
     max-width: 600px;
 }
 
@@ -312,7 +312,7 @@ a {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Changed from center to flex-end to push to the right */
     position: relative;
     max-width: 300px;
     margin: 0 auto;
@@ -320,8 +320,9 @@ a {
 
 .hero-mockup {
     width: 100%;
+    max-width: 250px; /* Added max-width to limit size */
     height: auto;
-    max-height: 250px;
+    max-height: 200px; /* Reduced from 250px */
     object-fit: contain;
     border-radius: 16px;
     box-shadow: var(--shadow);
@@ -330,6 +331,25 @@ a {
 
 .hero-mockup:hover {
     transform: translateY(-10px);
+}
+
+/* Add media query for responsive design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-graphic {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .hero-mockup {
+        max-width: 200px;
+        max-height: 150px;
+    }
 }
 
 .token-glow {
