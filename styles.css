@@ -641,6 +641,47 @@ a {
     color: transparent;
     margin: 1rem 0;
 }
+/* Stats Section - Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stats-chart-container {
+        height: 250px;
+        padding: 1.5rem;
+    }
+    
+    .stats-info {
+        gap: 1.5rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-highlight {
+        font-size: 2rem;
+        margin: 0.75rem 0;
+    }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+    .stats-chart-container {
+        height: 200px;
+        padding: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .stat-highlight {
+        font-size: 1.75rem;
+    }
+}
 
 /* Backed by VCs Section */
 .vc-logos {
@@ -979,7 +1020,7 @@ footer {
     }
 
     .hero-mockup {
-        max-height: 150px;
+        max-height: 200px;
     }
 
     .hero-content .cta-button.large {
