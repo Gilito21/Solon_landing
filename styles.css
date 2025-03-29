@@ -397,7 +397,7 @@ a {
     }
     
     .hero-mockup {
-        max-width: 220px; /* Even smaller on mobile */
+        max-width: 260px; /* Even smaller on mobile */
     }
     
     .hero-stats {
