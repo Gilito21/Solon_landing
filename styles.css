@@ -3,7 +3,7 @@
     --secondary-color: #cccccc;
     --accent-color: #888888;
     --bg-color: #121212;
-    --card-bg: rgba(32, 32, 32, 0.7);
+    --card-bg: rgba(30, 30, 30, 0.8);
     --text-color: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.7);
     --border-color: rgba(255, 255, 255, 0.1);
@@ -11,6 +11,12 @@
     --gradient-accent: linear-gradient(45deg, #cccccc, #555555);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     --glow: 0 0 20px rgba(255, 255, 255, 0.3);
+    
+    /* Additional variables for consistency */
+    --nav-bg: rgba(30, 30, 30, 0.8);
+    --chart-bg: rgba(30, 30, 30, 0.8);
+    --hover-color: rgba(255, 255, 255, 0.05);
+    --active-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
