@@ -115,12 +115,20 @@ a {
     left: 0;
     right: 0;
     padding: 1rem 0;
-    background: rgba(10, 11, 30, 0.8);
+    background: rgba(30, 30, 30, 0.8); /* Dark gray background */
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
 }
 
+/* Optional: Add a subtle shadow for depth */
+.navbar {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Keep the nav-container the same */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -128,6 +136,11 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+/* Optional: Add a subtle hover effect to make the navbar appear more solid on hover */
+.navbar:hover {
+    background: rgba(35, 35, 35, 0.85);
 }
 
 .logo {
