@@ -1150,3 +1150,15 @@ footer {
         max-width: 90%;
     }
 }
+
+/* Make the step icons white */
+.step-icon i {
+    color: white;
+}
+
+/* Optional: Add a subtle glow effect to make them stand out more */
+.step-icon i {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
