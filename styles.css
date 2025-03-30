@@ -336,14 +336,6 @@ a {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes shine {
-    0% {
-        background-position: -100% 0;
-    }
-    100% {
-        background-position: 300% 0;
-    }
-}
 
 /* Right Side: Mockup and CTA */
 .hero-right-content {
