@@ -305,21 +305,22 @@ a {
     filter: blur(1px);
 }
 
-/* Blue-green gradient dollar highlight on its own line */
+/* Blue-green gradient dollar highlight with more vivid colors */
 .hero-title .dollar-highlight {
-    font-size: 160%; /* Increased from 120% */
+    font-size: 160%;
     background: linear-gradient(90deg, 
-                #3498db 0%, 
-                #2ecc71 100%);
+                #00A3FF 0%, /* Brighter blue */
+                #00E676 100%); /* Brighter green */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.4),
-        0 0 10px rgba(52, 152, 219, 0.3);
+        0 0 15px rgba(0, 230, 118, 0.4); /* Brighter glow */
     display: block;
     line-height: 1.1;
     margin-top: 0.25rem;
+    font-weight: 800; /* Slightly bolder */
 }
 
 /* Right Side: Mockup and CTA with increased top spacing */
@@ -361,18 +362,18 @@ a {
     margin-top: 0.5rem;
 }
 
-/* Blue-Green Gradient CTA Button */
+/* Also update the CTA button to match */
 .cta-button {
     display: inline-block;
     background: linear-gradient(90deg, 
-                #3498db 0%, 
-                #2ecc71 100%);
+                #00A3FF 0%, /* Brighter blue */
+                #00E676 100%); /* Brighter green */
     color: #ffffff;
     padding: 1rem 2.5rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 230, 118, 0.35); /* Brighter shadow */
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: center;
@@ -383,13 +384,13 @@ a {
     overflow: hidden;
 }
 
-/* Enhanced hover effect */
+/* Enhanced hover effect with more vivid colors */
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 12px 25px rgba(0, 163, 255, 0.45); /* Brighter shadow */
     background: linear-gradient(90deg, 
-                #2ecc71 0%, 
-                #3498db 100%);  /* Reverse gradient on hover */
+                #00E676 0%, /* Brighter green */
+                #00A3FF 100%); /* Brighter blue */
 }
 
 @keyframes pulse {
