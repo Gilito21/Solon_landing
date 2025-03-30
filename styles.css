@@ -278,30 +278,22 @@ a {
     text-align: center; /* Add this line to center text within each element */
 }
 
-/* Enhanced Metallic Hero Title */
+/* Blue to Green Gradient Text Effect */
 .hero-title {
     font-size: 2.8rem;
-    font-weight: 800; /* Increased from 700 */
+    font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     color: transparent;
-    background: linear-gradient(180deg, 
-                #ffffff 0%, 
-                #e0e0e0 20%, 
-                #a0a0a0 40%,
-                #c0c0c0 60%,
-                #e8e8e8 80%,
-                #ffffff 100%);
+    background: linear-gradient(90deg, 
+                #3498db 0%, 
+                #2ecc71 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    text-shadow: 
-        0px 2px 3px rgba(0, 0, 0, 0.5),
-        0px 0px 6px rgba(255, 255, 255, 0.15);
-    position: relative;
-    letter-spacing: 0.5px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Enhanced shine effect */
+/* Optional shine effect */
 .hero-title::after {
     content: attr(data-text);
     position: absolute;
@@ -310,70 +302,47 @@ a {
     z-index: -1;
     background: linear-gradient(120deg, 
                 transparent 0%, 
-                rgba(255, 255, 255, 0.8) 10%, 
+                rgba(255, 255, 255, 0.4) 10%, 
                 transparent 20%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: shine 3s linear infinite; /* Faster animation */
-    filter: blur(0.3px); /* Slight blur for softer shine */
+    animation: shine 4s linear infinite;
 }
 
-/* Edge highlight to enhance metallic look */
-.hero-title::before {
-    content: attr(data-text);
-    position: absolute;
-    left: 1px;
-    top: 1px;
-    background: linear-gradient(45deg, 
-                transparent 0%, 
-                #ffffff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 0.2;
-    z-index: -2;
-}
-
-/* Metallic Hero Text with a more visible effect */
+/* Similar gradient for the hero text but slightly more subtle */
 .hero-text {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    background: linear-gradient(180deg, 
-                #f5f5f5 0%, 
-                #a5a5a5 50%, 
-                #d8d8d8 100%);
+    color: transparent;
+    background: linear-gradient(90deg, 
+                #3498db 0%, 
+                #2ecc71 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0.8;
+}
+
+/* Make the dollar amount stand out */
+.hero-title .dollar-highlight {
+    font-size: 120%;
+    background: linear-gradient(90deg, 
+                #3498db 0%, 
+                #2ecc71 60%,
+                #3498db 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.3px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Enhanced shine animation */
 @keyframes shine {
     0% {
-        background-position: -200% 0;
+        background-position: -100% 0;
     }
     100% {
         background-position: 300% 0;
     }
-}
-
-/* Make the dollar amount stand out more */
-.hero-title .dollar-highlight {
-    font-size: 120%;
-    background: linear-gradient(180deg, 
-                #ffffff 0%, 
-                #e8e8e8 20%, 
-                #a0a0a0 50%,
-                #ffffff 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 
-        0px 3px 3px rgba(0, 0, 0, 0.6),
-        0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Right Side: Mockup and CTA */
