@@ -309,8 +309,8 @@ a {
 .hero-title .dollar-highlight {
     font-size: 160%;
     background: linear-gradient(90deg, 
-                #1E90FF 0%, /* Bright blue from image */
-                #32CD32 100%); /* Bright green from image */
+                #50FAF1 0%, /* Bright blue from image */
+                #3EFA70 100%); /* Bright green from image */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
