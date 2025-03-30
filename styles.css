@@ -279,6 +279,7 @@ a {
 }
 
 /* Cool Gray Text Effect */
+/* Updated hero title styling */
 .hero-title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -287,6 +288,10 @@ a {
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 /* Subtle gray shimmer effect */
@@ -300,16 +305,22 @@ a {
     filter: blur(1px);
 }
 
-/* Dollar highlight with subtle effect */
+/* Blue-green gradient dollar highlight on its own line */
 .hero-title .dollar-highlight {
-    font-size: 120%;
-    color: #ffffff;
+    font-size: 160%; /* Increased from 120% */
+    background: linear-gradient(90deg, 
+                #3498db 0%, 
+                #2ecc71 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     text-shadow: 
         0 2px 4px rgba(0, 0, 0, 0.4),
-        0 0 10px rgba(255, 255, 255, 0.3);
+        0 0 10px rgba(52, 152, 219, 0.3);
+    display: block;
+    line-height: 1.1;
+    margin-top: 0.25rem;
 }
-
-
 
 /* Right Side: Mockup and CTA with increased top spacing */
 .hero-right-content {
