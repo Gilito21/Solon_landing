@@ -305,22 +305,20 @@ a {
     filter: blur(1px);
 }
 
-/* Blue-green gradient dollar highlight with more vivid colors */
+/* Blue-green gradient dollar highlight matching the image colors exactly */
 .hero-title .dollar-highlight {
     font-size: 160%;
     background: linear-gradient(90deg, 
-                #00A3FF 0%, /* Brighter blue */
-                #00E676 100%); /* Brighter green */
+                #1E90FF 0%, /* Bright blue from image */
+                #32CD32 100%); /* Bright green from image */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.4),
-        0 0 15px rgba(0, 230, 118, 0.4); /* Brighter glow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Just a subtle shadow, no glow */
     display: block;
     line-height: 1.1;
     margin-top: 0.25rem;
-    font-weight: 800; /* Slightly bolder */
+    font-weight: 800;
 }
 
 /* Right Side: Mockup and CTA with increased top spacing */
@@ -362,18 +360,17 @@ a {
     margin-top: 0.5rem;
 }
 
-/* Also update the CTA button to match */
 .cta-button {
     display: inline-block;
     background: linear-gradient(90deg, 
-                #00A3FF 0%, /* Brighter blue */
-                #00E676 100%); /* Brighter green */
+                #1E90FF 0%, /* Bright blue from image */
+                #32CD32 100%); /* Bright green from image */
     color: #ffffff;
     padding: 1rem 2.5rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0, 230, 118, 0.35); /* Brighter shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Neutral shadow */
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: center;
@@ -384,13 +381,13 @@ a {
     overflow: hidden;
 }
 
-/* Enhanced hover effect with more vivid colors */
+/* Enhanced hover effect with matching colors */
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 163, 255, 0.45); /* Brighter shadow */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Deeper neutral shadow */
     background: linear-gradient(90deg, 
-                #00E676 0%, /* Brighter green */
-                #00A3FF 100%); /* Brighter blue */
+                #32CD32 0%, /* Bright green from image */
+                #1E90FF 100%); /* Bright blue from image */
 }
 
 @keyframes pulse {
