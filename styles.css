@@ -307,7 +307,7 @@ a {
 
 /* Blue-green gradient dollar highlight matching the image colors exactly */
 .hero-title .dollar-highlight {
-    font-size: 160%;
+    font-size: 120%;
     background: linear-gradient(90deg, 
                 #50FAF1 0%, /* Bright blue from image */
                 #3EFA70 100%); /* Bright green from image */
