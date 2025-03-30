@@ -278,63 +278,37 @@ a {
     text-align: center; /* Add this line to center text within each element */
 }
 
-/* Blue to Green Gradient Text Effect */
+/* Cool Gray Text Effect */
 .hero-title {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: transparent;
-    background: linear-gradient(90deg, 
-                #3498db 0%, 
-                #2ecc71 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-/* Optional shine effect */
+/* Subtle gray shimmer effect */
 .hero-title::after {
     content: attr(data-text);
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient(120deg, 
-                transparent 0%, 
-                rgba(255, 255, 255, 0.4) 10%, 
-                transparent 20%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shine 4s linear infinite;
+    color: rgba(200, 200, 200, 0.1);
+    filter: blur(1px);
 }
 
-/* Similar gradient for the hero text but slightly more subtle */
-.hero-text {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: transparent;
-    background: linear-gradient(90deg, 
-                #3498db 0%, 
-                #2ecc71 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    opacity: 0.8;
-}
-
-/* Make the dollar amount stand out */
+/* Dollar highlight with subtle effect */
 .hero-title .dollar-highlight {
     font-size: 120%;
-    background: linear-gradient(90deg, 
-                #3498db 0%, 
-                #2ecc71 60%,
-                #3498db 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(255, 255, 255, 0.3);
 }
+
 
 
 /* Right Side: Mockup and CTA */
@@ -374,25 +348,65 @@ a {
     margin-top: 0.5rem;
 }
 
+/* Blue-Green Gradient CTA Button */
 .cta-button {
     display: inline-block;
-    background: var(--gradient-primary);
-    color: var(--text-color);
+    background: linear-gradient(90deg, 
+                #3498db 0%, 
+                #2ecc71 100%);
+    color: #ffffff;
     padding: 1rem 2.5rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: var(--shadow);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
     transition: all 0.3s ease;
     text-decoration: none;
     text-align: center;
     width: 100%;
     max-width: 250px;
+    border: none;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Enhanced hover effect */
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 25px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(90deg, 
+                #2ecc71 0%, 
+                #3498db 100%);  /* Reverse gradient on hover */
+}
+
+/* Optional: Add subtle pulse animation */
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+                rgba(52, 152, 219, 0.5) 0%, 
+                rgba(46, 204, 113, 0.5) 100%);
+    opacity: 0;
+    border-radius: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.15);
+    }
 }
 
 .cta-button i {
