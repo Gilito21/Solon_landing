@@ -311,13 +311,14 @@ a {
 
 
 
-/* Right Side: Mockup and CTA */
+/* Right Side: Mockup and CTA with increased top spacing */
 .hero-right-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
+    margin-top: 1.5rem; /* Added top margin to create space from nav */
 }
 
 .hero-graphic {
@@ -325,11 +326,12 @@ a {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
+    padding-top: 0.75rem; /* Additional padding at the top of the graphic */
 }
 
 .hero-mockup {
     width: 100%;
-    max-width: 250px; /* Reduced from 300px */
+    max-width: 250px;
     height: auto;
     object-fit: contain;
     border-radius: 16px;
@@ -377,22 +379,6 @@ a {
     background: linear-gradient(90deg, 
                 #2ecc71 0%, 
                 #3498db 100%);  /* Reverse gradient on hover */
-}
-
-/* Optional: Add subtle pulse animation */
-.cta-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-                rgba(52, 152, 219, 0.5) 0%, 
-                rgba(46, 204, 113, 0.5) 100%);
-    opacity: 0;
-    border-radius: 30px;
-    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -476,7 +462,7 @@ a {
     }
     
     .hero-mockup {
-        max-width: 260px; /* Even smaller on mobile */
+        max-width: 320px; /* Even smaller on mobile */
     }
     
     .hero-stats {
