@@ -438,11 +438,29 @@ a {
     }
     
     .hero-content {
-        gap: 2rem;
+        gap: 1.5rem; /* Reduced from 2rem */
+    }
+    
+    .hero-right-content {
+        margin-top: 1rem; /* Add some space at the top but less than desktop */
+    }
+    
+    .hero-graphic {
+        margin-bottom: 0.75rem; /* Slightly reduce space between mockup and button */
+    }
+    
+    .hero-mockup {
+        max-width: 230px; /* Slightly smaller on medium screens */
     }
     
     .hero-stats {
-        gap: 4rem;
+        gap: 3rem; /* Reduced from 4rem */
+        margin-top: 3rem; /* Add this to reduce space above stats */
+    }
+    
+    .cta-button {
+        max-width: 230px; /* Match mockup width */
+        padding: 0.9rem 2rem; /* Slightly smaller padding */
     }
 }
 
@@ -459,7 +477,7 @@ a {
     }
     
     .hero-right-content {
-        margin-top: 0.5rem; /* Reduced top margin on mobile */
+        margin-top: 0rem; /* Reduced top margin on mobile */
     }
     
     .hero-text-content {
@@ -468,7 +486,7 @@ a {
     }
     
     .hero-mockup {
-        max-width: 280px; /* Slightly smaller on mobile */
+        max-width: 320px; /* Slightly smaller on mobile */
     }
     
     /* Reduce space between mockup and button */
