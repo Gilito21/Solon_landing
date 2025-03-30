@@ -450,11 +450,11 @@ a {
     }
     
     .hero-content {
-        gap: 1.5rem; /* Reduced from 2rem */
+        gap: 1rem; /* Reduced from 2rem */
     }
     
     .hero-right-content {
-        margin-top: 1rem; /* Add some space at the top but less than desktop */
+        margin-top: 0rem; /* Add some space at the top but less than desktop */
     }
     
     .hero-graphic {
@@ -462,7 +462,7 @@ a {
     }
     
     .hero-mockup {
-        max-width: 230px; /* Slightly smaller on medium screens */
+        max-width: 300px; /* Slightly smaller on medium screens */
     }
     
     .hero-stats {
@@ -481,7 +481,7 @@ a {
         flex-direction: column;
         text-align: center;
         padding-top: 0.5rem; /* Reduced from 1rem */
-        gap: 1rem; /* Reduced from 2rem */
+        gap: 0.5rem; /* Reduced from 2rem */
     }
     
     .hero-text-content, .hero-right-content {
