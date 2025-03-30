@@ -325,7 +325,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     padding-top: 0.75rem; /* Additional padding at the top of the graphic */
 }
 
@@ -450,47 +450,75 @@ a {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        padding-top: 1rem;
+        padding-top: 0.5rem; /* Reduced from 1rem */
+        gap: 1rem; /* Reduced from 2rem */
     }
     
     .hero-text-content, .hero-right-content {
         max-width: 100%;
     }
     
+    .hero-right-content {
+        margin-top: 0.5rem; /* Reduced top margin on mobile */
+    }
+    
     .hero-text-content {
         align-items: center;
+        margin-bottom: 0.5rem; /* Add this to reduce space after text */
     }
     
     .hero-mockup {
-        max-width: 320px; /* Even smaller on mobile */
+        max-width: 280px; /* Slightly smaller on mobile */
+    }
+    
+    /* Reduce space between mockup and button */
+    .hero-graphic {
+        margin-bottom: 0.5rem;
     }
     
     .hero-stats {
         gap: 2.5rem;
         flex-wrap: wrap;
+        margin-top: 2.5rem; /* Reduced from 4rem */
     }
     
     .hero-title {
         font-size: 2rem;
+        margin-bottom: 1rem; /* Reduced from 1.5rem */
     }
-
+    
+    .hero-text {
+        margin-bottom: 1rem; /* Reduced from 2rem */
+    }
+    
     .cta-button {
-        max-width: 300px;
+        max-width: 280px;
     }
 }
 
+/* Additional adjustments for very small screens */
 @media (max-width: 480px) {
+    .hero-content {
+        gap: 0.5rem; /* Even tighter spacing on smallest screens */
+    }
+    
+    .hero-right-content {
+        margin-top: 0.25rem; /* Minimal spacing on smallest screens */
+    }
+    
     .hero-stats {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem; /* Reduced from 2rem */
+        margin-top: 2rem; /* Reduced from original */
     }
     
     .hero-title {
         font-size: 1.8rem;
+        margin-bottom: 0.75rem; /* Further reduced */
     }
     
     .hero {
-        padding: 1rem 1rem 3rem;
+        padding: 1rem 1rem 2.5rem; /* Reduced bottom padding */
     }
 }
 
